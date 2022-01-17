@@ -1,7 +1,7 @@
 ﻿using Cadmus.Core.Config;
 using Cadmus.Seed;
 using Cadmus.Seed.Parts.General;
-using Cadmus.Seed.Philology.Parts.Layers;
+using Cadmus.Seed.Philology.Parts;
 using Cadmus.Seed.Pura.Parts;
 using Cadmus.Seed.Tgr.Parts.Grammar;
 using Fusi.Microsoft.Extensions.Configuration.InMemoryJson;

@@ -7,7 +7,7 @@ namespace Cadmus.Cli.Plugin.Pura.Test
         [Fact]
         public void CreateRepository_NotNull()
         {
-            PuraCliRepositoryFactoryProvider provider = new();
+            PuraCliCadmusRepositoryProvider provider = new();
             provider.ConnectionString = "mongodb://localhost:27017/{0}";
             Assert.NotNull(provider.CreateRepository("test"));
         }

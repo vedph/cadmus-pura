@@ -5,7 +5,7 @@ using Cadmus.Core.Config;
 using Cadmus.Core.Storage;
 using Cadmus.Mongo;
 using Cadmus.Parts.General;
-using Cadmus.Philology.Parts.Layers;
+using Cadmus.Philology.Parts;
 using Cadmus.Pura.Parts;
 using Cadmus.Tgr.Parts.Codicology;
 using Microsoft.Extensions.Configuration;

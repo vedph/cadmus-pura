@@ -4,7 +4,7 @@ using Cadmus.Core.Config;
 using Cadmus.Core.Storage;
 using Cadmus.Mongo;
 using Cadmus.Parts.General;
-using Cadmus.Philology.Parts.Layers;
+using Cadmus.Philology.Parts;
 using Cadmus.Pura.Parts;
 using Cadmus.Tgr.Parts.Codicology;
 using Fusi.Tools.Config;
@@ -13,19 +13,18 @@ using System.Reflection;
 
 namespace Cadmus.Cli.Plugin.Pura
 {
-    [Tag("repository-factory-provider.pura")]
-    public sealed class PuraCliRepositoryFactoryProvider :
-        ICliRepositoryFactoryProvider
+    [Tag("cli-repository-provider.pura")]
+    public sealed class PuraCliCadmusRepositoryProvider :
+        ICliCadmusRepositoryProvider
     {
-        private readonly TagAttributeToTypeMap _map;
         private readonly IPartTypeProvider _partTypeProvider;
 
         public string ConnectionString { get; set; }
 
-        public PuraCliRepositoryFactoryProvider()
+        public PuraCliCadmusRepositoryProvider()
         {
-            _map = new TagAttributeToTypeMap();
-            _map.Add(new[]
+            var map = new TagAttributeToTypeMap();
+            map.Add(new[]
             {
                 // Cadmus.Parts
                 typeof(NotePart).GetTypeInfo().Assembly,
@@ -37,7 +36,7 @@ namespace Cadmus.Cli.Plugin.Pura
                 typeof(WordFormsPart).GetTypeInfo().Assembly,
             });
 
-            _partTypeProvider = new StandardPartTypeProvider(_map);
+            _partTypeProvider = new StandardPartTypeProvider(map);
         }
 
         public ICadmusRepository CreateRepository(string database)
@@ -47,9 +46,7 @@ namespace Cadmus.Cli.Plugin.Pura
 
             // create the repository (no need to use container here)
             MongoCadmusRepository repository =
-                new MongoCadmusRepository(
-                    _partTypeProvider,
-                    new StandardItemSortKeyBuilder());
+                new(_partTypeProvider, new StandardItemSortKeyBuilder());
 
             repository.Configure(new MongoCadmusRepositoryOptions
             {

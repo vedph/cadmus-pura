@@ -12,7 +12,7 @@
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageTags>Cadmus;PURA</PackageTags>
-    <Version>1.1.8</Version>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
