@@ -1,6 +1,6 @@
 ﻿using Cadmus.Core.Config;
 using Cadmus.Seed;
-using Cadmus.Seed.Parts.General;
+using Cadmus.Seed.General.Parts;
 using Cadmus.Seed.Philology.Parts;
 using Cadmus.Seed.Pura.Parts;
 using Cadmus.Seed.Tgr.Parts.Grammar;
@@ -33,7 +33,7 @@ namespace Cadmus.Pura.Services
             // build the tags to types map for parts/fragments
             Assembly[] seedAssemblies = new[]
             {
-                // Cadmus.Seed.Parts
+                // Cadmus.Seed.General.Parts
                 typeof(NotePartSeeder).Assembly,
                 // Cadmus.Seed.Philology.Parts
                 typeof(ApparatusLayerFragmentSeeder).Assembly,
