@@ -67,15 +67,13 @@ namespace Cadmus.Pura.Services
         {
             // create the repository (no need to use container here)
             MongoCadmusRepository repository =
-                new MongoCadmusRepository(
-                    _partTypeProvider,
-                    new StandardItemSortKeyBuilder());
+                new(_partTypeProvider, new StandardItemSortKeyBuilder());
 
             repository.Configure(new MongoCadmusRepositoryOptions
             {
                 ConnectionString = string.Format(
                     _configuration.GetConnectionString("Default"),
-                    _configuration.GetValue<string>("DatabaseName"))
+                    _configuration.GetValue<string>("DatabaseNames:Data"))
             });
 
             return repository;

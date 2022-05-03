@@ -20,6 +20,7 @@ You can find these files under `Cadmus.Pura.Parts.Test/Assets`. Note that curren
 
 ## History
 
+- 2022-05-02: upgraded to NET 6.0.
 - 2022-01-17: updated part and CLI libraries.
 - 2021-12-20: upgraded to new shell.
 - 2021-11-11: upgraded to NET 6.
