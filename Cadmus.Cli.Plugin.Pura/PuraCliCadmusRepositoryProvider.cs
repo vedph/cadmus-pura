@@ -26,7 +26,7 @@ namespace Cadmus.Cli.Plugin.Pura
             var map = new TagAttributeToTypeMap();
             map.Add(new[]
             {
-                // Cadmus.Parts
+                // Cadmus.General.Parts
                 typeof(NotePart).GetTypeInfo().Assembly,
                 // Cadmus.Philology.Parts
                 typeof(ApparatusLayerFragment).GetTypeInfo().Assembly,

@@ -11,7 +11,7 @@ namespace Cadmus.Pura.Parts.Test
     {
         private static WordFormsPart GetPart()
         {
-            WordFormsPartSeeder seeder = new WordFormsPartSeeder();
+            WordFormsPartSeeder seeder = new();
             IItem item = new Item
             {
                 FacetId = "default",

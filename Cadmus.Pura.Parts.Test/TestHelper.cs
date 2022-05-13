@@ -9,7 +9,7 @@ namespace Cadmus.Pura.Parts.Test
     internal sealed class TestHelper
     {
         private static readonly JsonSerializerOptions _options =
-            new JsonSerializerOptions
+            new()
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase
             };

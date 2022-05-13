@@ -42,11 +42,11 @@ namespace Cadmus.Pura.Services
                 // Cadmus.Seed.Pura.Parts
                 typeof(WordFormsPartSeeder).GetTypeInfo().Assembly,
             };
-            TagAttributeToTypeMap map = new TagAttributeToTypeMap();
+            TagAttributeToTypeMap map = new();
             map.Add(seedAssemblies);
 
             // build the container for seeders
-            Container container = new Container();
+            Container container = new();
             PartSeederFactory.ConfigureServices(
                 container,
                 new StandardPartTypeProvider(map),

@@ -3,8 +3,8 @@ using System.Reflection;
 using Cadmus.Core;
 using Cadmus.Core.Config;
 using Cadmus.Core.Storage;
+using Cadmus.General.Parts;
 using Cadmus.Mongo;
-using Cadmus.Parts.General;
 using Cadmus.Philology.Parts;
 using Cadmus.Pura.Parts;
 using Cadmus.Tgr.Parts.Codicology;
@@ -20,7 +20,6 @@ namespace Cadmus.Pura.Services
     public sealed class PuraRepositoryProvider : IRepositoryProvider
     {
         private readonly IConfiguration _configuration;
-        private readonly TagAttributeToTypeMap _map;
         private readonly IPartTypeProvider _partTypeProvider;
 
         /// <summary>
@@ -34,10 +33,10 @@ namespace Cadmus.Pura.Services
             _configuration = configuration ??
                 throw new ArgumentNullException(nameof(configuration));
 
-            _map = new TagAttributeToTypeMap();
-            _map.Add(new[]
+            TagAttributeToTypeMap map = new();
+            map.Add(new[]
             {
-                // Cadmus.Parts
+                // Cadmus.General.Parts
                 typeof(NotePart).GetTypeInfo().Assembly,
                 // Cadmus.Philology.Parts
                 typeof(ApparatusLayerFragment).GetTypeInfo().Assembly,
@@ -47,7 +46,7 @@ namespace Cadmus.Pura.Services
                 typeof(WordFormsPart).GetTypeInfo().Assembly,
             });
 
-            _partTypeProvider = new StandardPartTypeProvider(_map);
+            _partTypeProvider = new StandardPartTypeProvider(map);
         }
 
         /// <summary>

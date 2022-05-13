@@ -1,8 +1,8 @@
 ﻿using Cadmus.Core;
+using Cadmus.General.Parts;
 using Cadmus.Index.Graph;
 using Cadmus.Index.MySql;
 using Cadmus.Index.Sql;
-using Cadmus.Parts.General;
 using Fusi.DbManager;
 using Fusi.DbManager.MySql;
 using System;
@@ -39,7 +39,7 @@ namespace Cadmus.Pura.Parts.Test.Index
 
         private static IGraphRepository GetRepository()
         {
-            MySqlGraphRepository repository = new MySqlGraphRepository();
+            MySqlGraphRepository repository = new();
             repository.Configure(new SqlOptions
             {
                 ConnectionString = CS
@@ -67,7 +67,7 @@ namespace Cadmus.Pura.Parts.Test.Index
             Reset();
             IGraphRepository repository = GetRepository();
             int nodeCount = IndexHelper.AddPresets(repository, false);
-            NodeMapper mapper = new NodeMapper(repository);
+            NodeMapper mapper = new(repository);
 
             // item
             IItem item = GetLemmaItem();
@@ -120,13 +120,13 @@ namespace Cadmus.Pura.Parts.Test.Index
             Reset();
             IGraphRepository repository = GetRepository();
             int nodeCount = IndexHelper.AddPresets(repository, false);
-            NodeMapper mapper = new NodeMapper(repository);
+            NodeMapper mapper = new(repository);
 
             // item
             IItem item = GetLemmaItem();
 
             // word forms part
-            WordFormsPart part = new WordFormsPart
+            WordFormsPart part = new()
             {
                 ItemId = item.Id,
                 CreatorId = "zeus",
@@ -246,7 +246,7 @@ namespace Cadmus.Pura.Parts.Test.Index
             Reset();
             IGraphRepository repository = GetRepository();
             int nodeCount = IndexHelper.AddPresets(repository, true);
-            NodeMapper mapper = new NodeMapper(repository);
+            NodeMapper mapper = new(repository);
 
             // item
             IItem item = GetLemmaItem();
@@ -287,7 +287,7 @@ namespace Cadmus.Pura.Parts.Test.Index
             Reset();
             IGraphRepository repository = GetRepository();
             int nodeCount = IndexHelper.AddPresets(repository, true);
-            NodeMapper mapper = new NodeMapper(repository);
+            NodeMapper mapper = new(repository);
 
             // item
             IItem item = GetLemmaItem();
