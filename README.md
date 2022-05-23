@@ -20,6 +20,10 @@ You can find these files under `Cadmus.Pura.Parts.Test/Assets`. Note that curren
 
 ## History
 
+### 3.0.3
+
+- 2022-05-23: updated packages.
+
 ### 3.0.2
 
 - 2022-05-13: updated TGR dependencies to use correct version of Cadmus general parts.
