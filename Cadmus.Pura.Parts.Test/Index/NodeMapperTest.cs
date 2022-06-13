@@ -1,4 +1,5 @@
-﻿using Cadmus.Core;
+﻿/*
+using Cadmus.Core;
 using Cadmus.General.Parts;
 using Cadmus.Index.Graph;
 using Cadmus.Index.MySql;
@@ -363,3 +364,4 @@ namespace Cadmus.Pura.Parts.Test.Index
         }
     }
 }
+*/

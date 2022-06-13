@@ -1,5 +1,6 @@
-﻿using Cadmus.Core.Config;
-using Cadmus.Index.Graph;
+﻿/*
+using Cadmus.Core.Config;
+using Cadmus.Graph;
 using System.IO;
 
 namespace Cadmus.Pura.Parts.Test.Index
@@ -60,3 +61,4 @@ namespace Cadmus.Pura.Parts.Test.Index
         }
     }
 }
+*/
