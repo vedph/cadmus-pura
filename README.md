@@ -20,6 +20,10 @@ You can find these files under `Cadmus.Pura.Parts.Test/Assets`. Note that curren
 
 ## History
 
+### 3.0.5
+
+- 2022-08-14: updated packages.
+
 ### 3.0.4
 
 - 2022-06-13: updated packages. Commented out legacy tests for graph as the graph subsystem is being refactored.
