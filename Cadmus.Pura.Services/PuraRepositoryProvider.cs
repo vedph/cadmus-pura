@@ -8,31 +8,32 @@ using Cadmus.Mongo;
 using Cadmus.Philology.Parts;
 using Cadmus.Pura.Parts;
 using Cadmus.Tgr.Parts.Codicology;
-using Microsoft.Extensions.Configuration;
-using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
+using Fusi.Tools.Config;
 
 namespace Cadmus.Pura.Services
 {
     /// <summary>
     /// Cadmus PURA repository provider.
+    /// Tag: <c>repository-provider.pura</c>.
     /// </summary>
     /// <seealso cref="IRepositoryProvider" />
+    [Tag("repository-provider.pura")]
     public sealed class PuraRepositoryProvider : IRepositoryProvider
     {
-        private readonly IConfiguration _configuration;
         private readonly IPartTypeProvider _partTypeProvider;
+
+        /// <summary>
+        /// The connection string.
+        /// </summary>
+        public string ConnectionString { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="StandardRepositoryProvider"/>
         /// class.
         /// </summary>
-        /// <param name="configuration">The configuration.</param>
         /// <exception cref="ArgumentNullException">configuration</exception>
-        public PuraRepositoryProvider(IConfiguration configuration)
+        public PuraRepositoryProvider()
         {
-            _configuration = configuration ??
-                throw new ArgumentNullException(nameof(configuration));
-
             TagAttributeToTypeMap map = new();
             map.Add(new[]
             {
@@ -70,9 +71,9 @@ namespace Cadmus.Pura.Services
 
             repository.Configure(new MongoCadmusRepositoryOptions
             {
-                ConnectionString = string.Format(
-                    _configuration.GetConnectionString("Default"),
-                    _configuration.GetValue<string>("DatabaseNames:Data"))
+                ConnectionString = ConnectionString ??
+                    throw new InvalidOperationException(
+                    "No connection string set for IRepositoryProvider implementation")
             });
 
             return repository;

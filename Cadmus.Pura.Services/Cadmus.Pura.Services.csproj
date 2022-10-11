@@ -12,21 +12,21 @@
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageTags>Cadmus;PURA</PackageTags>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>3.0.5</Version>
-    <FileVersion>3.0.5</FileVersion>
-    <AssemblyVersion>3.0.5</AssemblyVersion>
+    <Version>3.1.0</Version>
+    <FileVersion>3.1.0</FileVersion>
+    <AssemblyVersion>3.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cadmus.Core" Version="4.0.3" />
+    <PackageReference Include="Cadmus.Core" Version="4.1.0" />
     <PackageReference Include="Cadmus.General.Parts" Version="2.1.0" />
-    <PackageReference Include="Cadmus.Index.Sql" Version="4.0.3" />
-    <PackageReference Include="Cadmus.Mongo" Version="4.0.3" />
+    <PackageReference Include="Cadmus.Index.Sql" Version="4.1.0" />
+    <PackageReference Include="Cadmus.Mongo" Version="4.1.0" />
     <PackageReference Include="Cadmus.Philology.Parts" Version="4.0.0" />
     <PackageReference Include="Cadmus.Seed.General.Parts" Version="2.1.0" />
     <PackageReference Include="Cadmus.Seed.Philology.Parts" Version="4.0.0" />
-    <PackageReference Include="Cadmus.Seed.Tgr.Parts" Version="2.1.2" />
-    <PackageReference Include="Cadmus.Tgr.Parts" Version="2.1.2" />
+    <PackageReference Include="Cadmus.Seed.Tgr.Parts" Version="2.2.0" />
+    <PackageReference Include="Cadmus.Tgr.Parts" Version="2.2.0" />
     <PackageReference Include="Fusi.Microsoft.Extensions.Configuration.InMemoryJson" Version="1.0.3" />
   </ItemGroup>
 

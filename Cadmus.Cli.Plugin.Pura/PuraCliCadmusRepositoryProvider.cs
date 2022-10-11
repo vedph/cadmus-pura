@@ -13,6 +13,7 @@ using System.Reflection;
 
 namespace Cadmus.Cli.Plugin.Pura
 {
+    [Obsolete("Replace CLI providers with shared providers")]
     [Tag("cli-repository-provider.pura")]
     public sealed class PuraCliCadmusRepositoryProvider :
         ICliCadmusRepositoryProvider

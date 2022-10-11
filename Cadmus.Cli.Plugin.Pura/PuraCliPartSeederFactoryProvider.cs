@@ -14,6 +14,7 @@ using System.Reflection;
 
 namespace Cadmus.Cli.Plugin.Pura
 {
+    [Obsolete("Replace CLI providers with shared providers")]
     [Tag("cli-seeder-factory-provider.pura")]
     public class PuraCliPartSeederFactoryProvider
         : ICliPartSeederFactoryProvider
