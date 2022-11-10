@@ -31,7 +31,7 @@ namespace Cadmus.Seed.Pura.Parts
         /// <returns>A new fragment.</returns>
         /// <exception cref="ArgumentNullException">location or baseText
         /// </exception>
-        public override ITextLayerFragment GetFragment(
+        public override ITextLayerFragment? GetFragment(
             IItem item, string location, string baseText)
         {
             if (location == null)
@@ -44,7 +44,7 @@ namespace Cadmus.Seed.Pura.Parts
                 .RuleFor(fr => fr.Tag, f => f.PickRandom(null, "t1", "t2"))
                 .RuleFor(fr => fr.Value, f => f.Lorem.Word())
                 .Generate();
-            fragment.NormValue = fragment.Value.ToUpperInvariant();
+            fragment.NormValue = fragment.Value?.ToUpperInvariant();
             return fragment;
         }
     }

@@ -25,7 +25,7 @@ namespace Cadmus.Seed.Pura.Parts.Test
         public void TypeHasTagAttribute()
         {
             Type t = typeof(LemmaTagLayerFragmentSeeder);
-            TagAttribute attr = t.GetTypeInfo().GetCustomAttribute<TagAttribute>();
+            TagAttribute? attr = t.GetTypeInfo().GetCustomAttribute<TagAttribute>();
             Assert.NotNull(attr);
             Assert.Equal("seed.fr.it.vedph.pura.lemma-tag", attr.Tag);
         }
@@ -33,25 +33,25 @@ namespace Cadmus.Seed.Pura.Parts.Test
         [Fact]
         public void GetFragmentType_Ok()
         {
-            LemmaTagLayerFragmentSeeder seeder = new LemmaTagLayerFragmentSeeder();
+            LemmaTagLayerFragmentSeeder seeder = new();
             Assert.Equal(typeof(LemmaTagLayerFragment), seeder.GetFragmentType());
         }
 
         [Fact]
         public void Seed_WithOptions_Ok()
         {
-            LemmaTagLayerFragmentSeeder seeder = new LemmaTagLayerFragmentSeeder();
+            LemmaTagLayerFragmentSeeder seeder = new();
             seeder.SetSeedOptions(_seedOptions);
-            ITextLayerFragment fragment = seeder.GetFragment(_item, "1.1", "alpha");
+            ITextLayerFragment? fragment = seeder.GetFragment(_item, "1.1", "alpha");
 
             Assert.NotNull(fragment);
 
-            LemmaTagLayerFragment fr = fragment as LemmaTagLayerFragment;
+            LemmaTagLayerFragment? fr = fragment as LemmaTagLayerFragment;
             Assert.NotNull(fr);
 
             Assert.Equal("1.1", fr.Location);
-            Assert.NotEmpty(fr.Value);
-            Assert.NotEmpty(fr.NormValue);
+            Assert.NotEmpty(fr.Value!);
+            Assert.NotEmpty(fr.NormValue!);
         }
     }
 }

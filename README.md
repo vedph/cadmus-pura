@@ -20,6 +20,10 @@ You can find these files under `Cadmus.Pura.Parts.Test/Assets`. Note that curren
 
 ## History
 
+### 4.0.0
+
+- 2022-11-10: upgraded to NET 7.
+
 ### 3.1.0
 
 - 2022-10-11: updated packages and injection in `Startup.cs` for new `IRepositoryProvider`.

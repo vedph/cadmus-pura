@@ -17,7 +17,7 @@ namespace Cadmus.Seed.Pura.Parts
     {
         private static List<VariantForm> GetVariantForms(int min, int max)
         {
-            List<VariantForm> forms = new List<VariantForm>();
+            List<VariantForm> forms = new();
             int count = Randomizer.Seed.Next(min, max + 1);
 
             for (int n = 1; n <= count; n++)
@@ -41,13 +41,13 @@ namespace Cadmus.Seed.Pura.Parts
         /// for layer parts, which need to seed a set of fragments.</param>
         /// <returns>A new part.</returns>
         /// <exception cref="ArgumentNullException">item or factory</exception>
-        public override IPart GetPart(IItem item, string roleId,
-            PartSeederFactory factory)
+        public override IPart? GetPart(IItem item, string? roleId,
+            PartSeederFactory? factory)
         {
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
 
-            WordFormsPart part = new WordFormsPart();
+            WordFormsPart part = new();
             SetPartMetadata(part, roleId, item);
 
             for (int n = 1; n <= Randomizer.Seed.Next(1, 3 + 1); n++)
@@ -62,7 +62,7 @@ namespace Cadmus.Seed.Pura.Parts
                     .RuleFor(w => w.Variants, GetVariantForms(1, 3))
                     .Generate();
 
-                form.Lid = form.Lemma.ToUpperInvariant();
+                form.Lid = form.Lemma?.ToUpperInvariant();
 
                 part.Forms.Add(form);
             }

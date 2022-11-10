@@ -28,17 +28,26 @@ namespace Cadmus.Pura.Parts
         /// <summary>
         /// Gets or sets the tag.
         /// </summary>
-        public string Tag { get; set; }
+        public string? Tag { get; set; }
 
         /// <summary>
         /// Gets or sets the value.
         /// </summary>
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
         /// <summary>
         /// Gets or sets the normalized value.
         /// </summary>
-        public string NormValue { get; set; }
+        public string? NormValue { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LemmaTagLayerFragment"/>
+        /// class.
+        /// </summary>
+        public LemmaTagLayerFragment()
+        {
+            Location = "";
+        }
 
         /// <summary>
         /// Get all the key=value pairs exposed by the implementor.
@@ -47,10 +56,9 @@ namespace Cadmus.Pura.Parts
         /// can optionally be passed to this method for those parts requiring
         /// to access further data.</param>
         /// <returns>The pins: <c>fr.tag</c>=tag if any.</returns>
-        public IEnumerable<DataPin> GetDataPins(IItem item = null)
+        public IEnumerable<DataPin> GetDataPins(IItem? item = null)
         {
-            DataPinBuilder builder = new DataPinBuilder(
-                DataPinHelper.DefaultFilter);
+            DataPinBuilder builder = new(DataPinHelper.DefaultFilter);
 
             builder.AddValue(PartBase.FR_PREFIX + "value",
                 Value, filter: true, filterOptions: true);
@@ -89,7 +97,7 @@ namespace Cadmus.Pura.Parts
         /// </returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
 
             sb.Append("[LemmaTags]");
 

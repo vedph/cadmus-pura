@@ -15,18 +15,18 @@ namespace Cadmus.Pura.Parts
         /// uppercase letters and no diacritics, followed by the homograph
         /// number if greater than 0.
         /// </summary>
-        public string Lid { get; set; }
+        public string? Lid { get; set; }
 
         /// <summary>
         /// Gets or sets the prelemma. This can be any text prefixed to the
         /// lemma (e.g. <c>to</c> before an English verb).
         /// </summary>
-        public string Prelemma { get; set; }
+        public string? Prelemma { get; set; }
 
         /// <summary>
         /// Gets or sets the lemma.
         /// </summary>
-        public string Lemma { get; set; }
+        public string? Lemma { get; set; }
 
         /// <summary>
         /// Gets or sets the postlemma. This can be any text suffixed to the
@@ -34,7 +34,7 @@ namespace Cadmus.Pura.Parts
         /// in <c>log off</c>; or the article representing the genre in a Greek
         /// word).
         /// </summary>
-        public string Postlemma { get; set; }
+        public string? Postlemma { get; set; }
 
         /// <summary>
         /// Gets or sets the homograph number. This is usually 0. Set to 1 or
@@ -45,12 +45,12 @@ namespace Cadmus.Pura.Parts
         /// <summary>
         /// Gets or sets the part of speech (POS) for this word.
         /// </summary>
-        public string Pos { get; set; }
+        public string? Pos { get; set; }
 
         /// <summary>
         /// Gets or sets an optional note.
         /// </summary>
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
         /// <summary>
         /// Gets or sets an optional list of variant forms (e.g. alternative
@@ -75,7 +75,7 @@ namespace Cadmus.Pura.Parts
         /// </returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
 
             if (!string.IsNullOrEmpty(Prelemma))
                 sb.Append(Prelemma).Append(' ');

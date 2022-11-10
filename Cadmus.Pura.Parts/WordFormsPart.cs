@@ -34,24 +34,23 @@ namespace Cadmus.Pura.Parts
         /// <returns>The pins: <c>tot-count</c> and a collection of pins with
         /// these keys: <c>lid</c>, <c>lemma</c>, <c>u-lemma</c>, <c>pos</c>,
         /// <c>variant</c>, <c>u-variant</c>.</returns>
-        public override IEnumerable<DataPin> GetDataPins(IItem item)
+        public override IEnumerable<DataPin> GetDataPins(IItem? item = null)
         {
-            DataPinBuilder builder = new DataPinBuilder(
+            DataPinBuilder builder = new(
                 DataPinHelper.DefaultFilter);
 
             builder.Set("tot", Forms?.Count ?? 0, false);
 
-            HashSet<string> forms = new HashSet<string>();
-            HashSet<string> poss = new HashSet<string>();
+            HashSet<string> forms = new();
+            HashSet<string> poss = new();
 
             if (Forms?.Count > 0)
             {
                 foreach (WordForm form in Forms)
                 {
-                    string lemma = DataPinHelper.DefaultFilter.Apply(
-                        form.Lemma, true);
+                    string lemma = DataPinHelper.DefaultFilter.Apply(form.Lemma, true)!;
                     forms.Add(lemma);
-                    poss.Add(form.Pos);
+                    poss.Add(form.Pos!);
 
                     builder.AddValue("eid", form.Lid);
                     builder.AddValue("lemma@" + form.Lid, lemma);
@@ -63,7 +62,7 @@ namespace Cadmus.Pura.Parts
                         foreach (var v in form.Variants)
                         {
                             string fv = DataPinHelper.DefaultFilter.Apply(
-                                v.Value, true);
+                                v.Value, true)!;
                             forms.Add(fv);
                             builder.AddValue("variant@" + form.Lid, fv);
                             builder.AddValue("u-variant@" + form.Lid, v.Value);
@@ -131,7 +130,7 @@ namespace Cadmus.Pura.Parts
         /// </returns>
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
 
             sb.Append("[WordForms]");
 

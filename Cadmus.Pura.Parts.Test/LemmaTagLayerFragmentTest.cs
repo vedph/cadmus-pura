@@ -14,7 +14,7 @@ namespace Cadmus.Pura.Parts.Test
         {
             var seeder = new LemmaTagLayerFragmentSeeder();
             return (LemmaTagLayerFragment)
-                seeder.GetFragment(null, "1.2", "exemplum fictum");
+                seeder.GetFragment(new Item(), "1.2", "exemplum fictum")!;
         }
 
         private static LemmaTagLayerFragment GetEmptyFragment()
@@ -28,9 +28,9 @@ namespace Cadmus.Pura.Parts.Test
         [Fact]
         public void Fragment_Has_Tag()
         {
-            TagAttribute attr = typeof(LemmaTagLayerFragment).GetTypeInfo()
+            TagAttribute? attr = typeof(LemmaTagLayerFragment).GetTypeInfo()
                 .GetCustomAttribute<TagAttribute>();
-            string typeId = attr != null ? attr.Tag : GetType().FullName;
+            string? typeId = attr != null ? attr.Tag : GetType().FullName;
             Assert.NotNull(typeId);
             Assert.StartsWith(PartBase.FR_PREFIX, typeId);
         }
@@ -42,7 +42,7 @@ namespace Cadmus.Pura.Parts.Test
 
             string json = TestHelper.SerializeFragment(fragment);
             LemmaTagLayerFragment fragment2 =
-                TestHelper.DeserializeFragment<LemmaTagLayerFragment>(json);
+                TestHelper.DeserializeFragment<LemmaTagLayerFragment>(json)!;
 
             Assert.Equal(fragment.Location, fragment2.Location);
             Assert.Equal(fragment.Tag, fragment.Tag);
@@ -62,7 +62,7 @@ namespace Cadmus.Pura.Parts.Test
 
             Assert.Equal(3, pins.Count);
 
-            DataPin pin = pins.Find(p => p.Name == PartBase.FR_PREFIX + "value"
+            DataPin? pin = pins.Find(p => p.Name == PartBase.FR_PREFIX + "value"
                && p.Value == "hello");
             Assert.NotNull(pin);
 

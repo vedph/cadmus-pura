@@ -8,17 +8,17 @@
         /// <summary>
         /// The form's value.
         /// </summary>
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
         /// <summary>
         /// Gets or sets the form's POS.
         /// </summary>
-        public string Pos { get; set; }
+        public string? Pos { get; set; }
 
         /// <summary>
         /// The form's optional tag.
         /// </summary>
-        public string Tag { get; set; }
+        public string? Tag { get; set; }
 
         /// <summary>
         /// Converts to string.
@@ -28,7 +28,7 @@
         /// </returns>
         public override string ToString()
         {
-            return string.IsNullOrEmpty(Tag)? Value : $"[{Tag}] ({Pos}) {Value}";
+            return string.IsNullOrEmpty(Tag)? Value! : $"[{Tag}] ({Pos}) {Value}";
         }
     }
 }

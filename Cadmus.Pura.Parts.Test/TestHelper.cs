@@ -22,7 +22,7 @@ namespace Cadmus.Pura.Parts.Test
             return JsonSerializer.Serialize(part, part.GetType(), _options);
         }
 
-        public static T DeserializePart<T>(string json)
+        public static T? DeserializePart<T>(string json)
             where T : class, IPart, new()
         {
             if (json == null)
@@ -39,7 +39,7 @@ namespace Cadmus.Pura.Parts.Test
             return JsonSerializer.Serialize(fr, fr.GetType(), _options);
         }
 
-        public static T DeserializeFragment<T>(string json)
+        public static T? DeserializeFragment<T>(string json)
             where T : class, ITextLayerFragment, new()
         {
             if (json == null)

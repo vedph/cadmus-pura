@@ -32,7 +32,7 @@ namespace Cadmus.Seed.Pura.Parts.Test
         [Fact]
         public void Seed_Ok()
         {
-            WordFormsPartSeeder seeder = new WordFormsPartSeeder();
+            WordFormsPartSeeder seeder = new();
             seeder.SetSeedOptions(_seedOptions);
 
             IPart part = seeder.GetPart(_item, null, _factory);

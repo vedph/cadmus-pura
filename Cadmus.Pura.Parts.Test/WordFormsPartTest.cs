@@ -21,7 +21,7 @@ namespace Cadmus.Pura.Parts.Test
                 Title = "Test Item",
                 SortKey = ""
             };
-            return (WordFormsPart)seeder.GetPart(item, null, null);
+            return (WordFormsPart)seeder.GetPart(item, null, null)!;
         }
 
         private static WordFormsPart GetEmptyPart()
@@ -42,7 +42,7 @@ namespace Cadmus.Pura.Parts.Test
 
             string json = TestHelper.SerializePart(part);
             WordFormsPart part2 =
-                TestHelper.DeserializePart<WordFormsPart>(json);
+                TestHelper.DeserializePart<WordFormsPart>(json)!;
 
             Assert.Equal(part.Id, part2.Id);
             Assert.Equal(part.TypeId, part2.TypeId);
@@ -100,7 +100,7 @@ namespace Cadmus.Pura.Parts.Test
             Assert.Equal(21, pins.Count);
 
             // tot-count
-            DataPin pin = pins.Find(p => p.Name == "tot-count");
+            DataPin? pin = pins.Find(p => p.Name == "tot-count");
             Assert.NotNull(pin);
             TestHelper.AssertPinIds(part, pin);
             Assert.Equal("3", pin.Value);

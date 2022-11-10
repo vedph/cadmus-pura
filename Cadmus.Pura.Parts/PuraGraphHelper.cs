@@ -16,7 +16,7 @@ namespace Cadmus.Pura.Parts
         {
             return new StreamReader(
                 typeof(PuraGraphHelper).Assembly.GetManifestResourceStream(
-                    "Cadmus.Pura.Parts.Assets.Graph.mysql"), Encoding.UTF8)
+                    "Cadmus.Pura.Parts.Assets.Graph.mysql")!, Encoding.UTF8)
                 .ReadToEnd();
         }
     }

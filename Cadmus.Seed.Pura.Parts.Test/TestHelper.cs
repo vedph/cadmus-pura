@@ -19,15 +19,14 @@ namespace Cadmus.Seed.Pura.Parts.Test
             if (name == null) throw new ArgumentNullException(nameof(name));
 
             return Assembly.GetExecutingAssembly().GetManifestResourceStream(
-                    $"Cadmus.Seed.Pura.Parts.Test.Assets.{name}");
+                    $"Cadmus.Seed.Pura.Parts.Test.Assets.{name}")!;
         }
 
         static public string LoadResourceText(string name)
         {
             if (name == null) throw new ArgumentNullException(nameof(name));
 
-            using (StreamReader reader = new StreamReader(
-                GetResourceStream(name),
+            using (StreamReader reader = new(GetResourceStream(name),
                 Encoding.UTF8))
             {
                 return reader.ReadToEnd();
@@ -37,7 +36,7 @@ namespace Cadmus.Seed.Pura.Parts.Test
         static public PartSeederFactory GetFactory()
         {
             // map
-            TagAttributeToTypeMap map = new TagAttributeToTypeMap();
+            TagAttributeToTypeMap map = new();
             map.Add(new[]
             {
                 // Cadmus.Core
@@ -47,7 +46,7 @@ namespace Cadmus.Seed.Pura.Parts.Test
             });
 
             // container
-            Container container = new Container();
+            Container container = new();
             PartSeederFactory.ConfigureServices(
                 container,
                 new StandardPartTypeProvider(map),
