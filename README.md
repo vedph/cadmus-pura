@@ -20,6 +20,10 @@ You can find these files under `Cadmus.Pura.Parts.Test/Assets`. Note that curren
 
 ## History
 
+### 4.0.1
+
+- 2022-12-23: updated packages.
+
 ### 4.0.0
 
 - 2022-11-10: upgraded to NET 7.
