@@ -1,23 +1,22 @@
 ﻿using System.IO;
 using System.Text;
 
-namespace Cadmus.Pura.Parts
+namespace Cadmus.Pura.Parts;
+
+/// <summary>
+/// PURA graph helper.
+/// </summary>
+static public class PuraGraphHelper
 {
     /// <summary>
-    /// PURA graph helper.
+    /// Gets the SQL code for seeding the PURA graph.
     /// </summary>
-    static public class PuraGraphHelper
+    /// <returns>SQL code.</returns>
+    static public string GetGraphSql()
     {
-        /// <summary>
-        /// Gets the SQL code for seeding the PURA graph.
-        /// </summary>
-        /// <returns>SQL code.</returns>
-        static public string GetGraphSql()
-        {
-            return new StreamReader(
-                typeof(PuraGraphHelper).Assembly.GetManifestResourceStream(
-                    "Cadmus.Pura.Parts.Assets.Graph.mysql")!, Encoding.UTF8)
-                .ReadToEnd();
-        }
+        return new StreamReader(
+            typeof(PuraGraphHelper).Assembly.GetManifestResourceStream(
+                "Cadmus.Pura.Parts.Assets.Graph.mysql")!, Encoding.UTF8)
+            .ReadToEnd();
     }
 }

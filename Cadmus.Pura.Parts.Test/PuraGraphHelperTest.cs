@@ -1,13 +1,12 @@
 ﻿using Xunit;
 
-namespace Cadmus.Pura.Parts.Test
+namespace Cadmus.Pura.Parts.Test;
+
+public sealed class PuraGraphHelperTest
 {
-    public sealed class PuraGraphHelperTest
+    [Fact]
+    public void GetGraphSql_NotNull()
     {
-        [Fact]
-        public void GetGraphSql_NotNull()
-        {
-            Assert.NotNull(PuraGraphHelper.GetGraphSql());
-        }
+        Assert.NotNull(PuraGraphHelper.GetGraphSql());
     }
 }
