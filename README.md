@@ -20,7 +20,7 @@ You can find these files under `Cadmus.Pura.Parts.Test/Assets`. Note that curren
 
 ## History
 
-### 5.0.3
+### 5.0.4
 
 - 2023-03-07: updated packages.
 
