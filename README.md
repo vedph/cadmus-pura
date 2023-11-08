@@ -20,6 +20,10 @@ You can find these files under `Cadmus.Pura.Parts.Test/Assets`. Note that curren
 
 ## History
 
+### 6.0.1
+
+- 2023-11-08: updated packages.
+
 ### 6.0.0
 
 - 2023-09-19: updated packages and migrated to PostgreSQL.
