@@ -3,7 +3,6 @@ using Cadmus.Seed;
 using Cadmus.Seed.General.Parts;
 using Cadmus.Seed.Philology.Parts;
 using Cadmus.Seed.Pura.Parts;
-using Cadmus.Seed.Tgr.Parts.Grammar;
 using Fusi.Microsoft.Extensions.Configuration.InMemoryJson;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -27,8 +26,6 @@ public sealed class PuraPartSeederFactoryProvider :
             typeof(NotePartSeeder).Assembly,
             // Cadmus.Seed.Philology.Parts
             typeof(ApparatusLayerFragmentSeeder).Assembly,
-            // Cadmus.Seed.Tgr.Parts
-            typeof(LingTagsLayerFragmentSeeder).GetTypeInfo().Assembly,
             // Cadmus.Seed.Pura.Parts
             typeof(WordFormsPartSeeder).GetTypeInfo().Assembly,
         };

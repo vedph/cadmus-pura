@@ -20,6 +20,10 @@ You can find these files under `Cadmus.Pura.Parts.Test/Assets`. Note that curren
 
 ## History
 
+### 7.0.0
+
+- 2023-11-13: removed references to TGR.
+
 ### 6.0.1
 
 - 2023-11-08: updated packages.
