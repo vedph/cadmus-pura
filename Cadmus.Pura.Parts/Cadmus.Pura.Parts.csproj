@@ -1,33 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	<Nullable>enable</Nullable>
-    <TargetFramework>net7.0</TargetFramework>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Authors>Daniele Fusi</Authors>
-    <Company>Fusi</Company>
-    <Product>Cadmus</Product>
-    <Description>Cadmus models for PURA.</Description>
-    <Copyright>by Daniele Fusi</Copyright>
-    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
-    <NeutralLanguage>en-US</NeutralLanguage>
-    <PackageTags>Cadmus;PURA</PackageTags>
-    <Version>7.0.0</Version>
-    <FileVersion>7.0.0</FileVersion>
-    <AssemblyVersion>7.0.0</AssemblyVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<TargetFramework>net8.0</TargetFramework>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<Authors>Daniele Fusi</Authors>
+		<Company>Fusi</Company>
+		<Product>Cadmus</Product>
+		<Description>Cadmus models for PURA.</Description>
+		<Copyright>by Daniele Fusi</Copyright>
+		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<PackageTags>Cadmus;PURA</PackageTags>
+		<Version>8.0.0</Version>
+		<FileVersion>8.0.0</FileVersion>
+		<AssemblyVersion>8.0.0</AssemblyVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Assets\Graph.mysql" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Assets\Graph.mysql" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Include="Assets\Graph.mysql" />
-  </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Assets\Graph.mysql" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Cadmus.Core" Version="6.1.18" />
-    <PackageReference Include="Cadmus.Seed.General.Parts" Version="5.0.5" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Cadmus.Core" Version="7.0.2" />
+		<PackageReference Include="Cadmus.Seed.General.Parts" Version="6.1.0" />
+	</ItemGroup>
 </Project>

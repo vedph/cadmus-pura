@@ -2,23 +2,11 @@
 
 Components for the [PURA project in Cadmus](https://github.com/vedph/cadmus_pura_doc).
 
-## Setting up Graph
-
-Preload nodes, mappings, and a selection of thesauri:
-
-```ps1
-.\cadmus-tool graph-add C:\Users\dfusi\Desktop\PresetNodes.json cadmus-pura .\plugins\Cadmus.Cli.Plugin.Pura\seed-profile.json repository-factory-provider.pura
-
-.\cadmus-tool graph-add C:\Users\dfusi\Desktop\PresetMappings.json cadmus-pura .\plugins\Cadmus.Cli.Plugin.Pura\seed-profile.json repository-factory-provider.pura -t M
-
-.\cadmus-tool graph-add C:\Users\dfusi\Desktop\PresetThesauri.json cadmus-pura .\plugins\Cadmus.Cli.Plugin.Pura\seed-profile.json repository-factory-provider.pura -t T -p x:categories/
-```
-
-Usually, this should be done only once.
-
-You can find these files under `Cadmus.Pura.Parts.Test/Assets`. Note that currently the `x:` URIs are just for the sake of testing.
-
 ## History
+
+### 8.0.0
+
+- 2024-03-01: upgraded to .NET8.
 
 ### 7.0.0
 
