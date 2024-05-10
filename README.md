@@ -4,6 +4,10 @@ Components for the [PURA project in Cadmus](https://github.com/vedph/cadmus_pura
 
 ## History
 
+### 8.0.1
+
+- 2024-05-10: updated packages.
+
 ### 8.0.0
 
 - 2024-03-01: upgraded to .NET8.
