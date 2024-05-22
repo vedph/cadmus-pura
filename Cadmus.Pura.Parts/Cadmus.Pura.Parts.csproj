@@ -13,9 +13,9 @@
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<PackageTags>Cadmus;PURA</PackageTags>
-		<Version>8.0.1</Version>
-		<FileVersion>8.0.1</FileVersion>
-		<AssemblyVersion>8.0.1</AssemblyVersion>
+		<Version>8.0.2</Version>
+		<FileVersion>8.0.2</FileVersion>
+		<AssemblyVersion>8.0.2</AssemblyVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -27,7 +27,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Cadmus.Core" Version="7.0.2" />
+		<PackageReference Include="Cadmus.Core" Version="7.0.3" />
 		<PackageReference Include="Cadmus.Seed.General.Parts" Version="6.1.0" />
 	</ItemGroup>
 </Project>
