@@ -12,9 +12,9 @@
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<PackageTags>Cadmus;PURA</PackageTags>
 		<NeutralLanguage>en-US</NeutralLanguage>
-		<Version>8.0.2</Version>
-		<FileVersion>8.0.2</FileVersion>
-		<AssemblyVersion>8.0.2</AssemblyVersion>
+		<Version>8.0.3</Version>
+		<FileVersion>8.0.3</FileVersion>
+		<AssemblyVersion>8.0.3</AssemblyVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -25,8 +25,8 @@
 		<PackageReference Include="Cadmus.Philology.Parts" Version="8.2.0" />
 		<PackageReference Include="Cadmus.Seed.General.Parts" Version="6.1.0" />
 		<PackageReference Include="Cadmus.Seed.Philology.Parts" Version="8.2.0" />
-		<PackageReference Include="Cadmus.Tgr.Parts" Version="7.0.1" />
-		<PackageReference Include="Fusi.Microsoft.Extensions.Configuration.InMemoryJson" Version="3.0.0" />
+		<PackageReference Include="Cadmus.Tgr.Parts" Version="7.0.2" />
+		<PackageReference Include="Fusi.Microsoft.Extensions.Configuration.InMemoryJson" Version="3.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
