@@ -4,6 +4,10 @@ Components for the [PURA project in Cadmus](https://github.com/vedph/cadmus_pura
 
 ## History
 
+### 8.0.5
+
+- 2024-07-26: updated packages.
+
 ### 8.0.4
 
 - 2024-07-19: updated packages.
