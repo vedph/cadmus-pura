@@ -1,8 +1,12 @@
-# Cadmus PURA Parts
+﻿# Cadmus PURA Parts
 
 Components for the [PURA project in Cadmus](https://github.com/vedph/cadmus_pura_doc).
 
 ## History
+
+### 9.0.0
+
+- 2024-11-27: ⚠️ upgraded to .NET 9.
 
 ### 8.0.5
 
