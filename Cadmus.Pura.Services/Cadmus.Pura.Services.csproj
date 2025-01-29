@@ -12,20 +12,20 @@
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<PackageTags>Cadmus;PURA</PackageTags>
 		<NeutralLanguage>en-US</NeutralLanguage>
-		<Version>9.0.1</Version>
-		<FileVersion>9.0.1</FileVersion>
-		<AssemblyVersion>9.0.1</AssemblyVersion>
+		<Version>9.0.2</Version>
+		<FileVersion>9.0.2</FileVersion>
+		<AssemblyVersion>9.0.2</AssemblyVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Cadmus.Core" Version="8.0.2" />
-		<PackageReference Include="Cadmus.General.Parts" Version="7.0.1" />
-		<PackageReference Include="Cadmus.Index.Ef.PgSql" Version="8.0.2" />
-		<PackageReference Include="Cadmus.Mongo" Version="8.0.3" />
-		<PackageReference Include="Cadmus.Philology.Parts" Version="9.0.1" />
-		<PackageReference Include="Cadmus.Seed.General.Parts" Version="7.0.1" />
-		<PackageReference Include="Cadmus.Seed.Philology.Parts" Version="9.0.1" />
-		<PackageReference Include="Cadmus.Tgr.Parts" Version="8.0.0" />
+		<PackageReference Include="Cadmus.Core" Version="8.0.4" />
+		<PackageReference Include="Cadmus.General.Parts" Version="7.0.2" />
+		<PackageReference Include="Cadmus.Index.Ef.PgSql" Version="8.0.4" />
+		<PackageReference Include="Cadmus.Mongo" Version="8.0.4" />
+		<PackageReference Include="Cadmus.Philology.Parts" Version="9.0.2" />
+		<PackageReference Include="Cadmus.Seed.General.Parts" Version="7.0.2" />
+		<PackageReference Include="Cadmus.Seed.Philology.Parts" Version="9.0.2" />
+		<PackageReference Include="Cadmus.Tgr.Parts" Version="8.0.1" />
 		<PackageReference Include="Fusi.Microsoft.Extensions.Configuration.InMemoryJson" Version="4.0.0" />
 	</ItemGroup>
 
